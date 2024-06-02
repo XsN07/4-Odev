@@ -10,7 +10,7 @@
     <span>1-99'a kadar olan sayıları for döngüsü ile yanyana</span>
     <button id="siralaBtn" onclick="sirala()">Sırala</button>
     <br>
-    <button id="rastgeleBtn" disabled>Rastgele sayı seç</button>
+    <button id="rastgeleBtn" onclick="rasstgeleSec()" disabled>Rastgele sayı seç</button>
     <div id="sonuc"></div>
     <script>
          var sonucEl=document.getElementById("sonuc");
@@ -33,6 +33,12 @@
                  // Butonları disable enable etme
             rastgeleBtn.disabled = false;
             siralaBtn.disabled = true;
+        }
+
+        function rasstgeleSec()
+        {
+            var rastgeleSayi = Math.floor(Math.random() * 99) + 1;
+            sonucEl.innerHTML += "Rastgele seçilen sayı: " + rastgeleSayi;
         }
     </script>
 </body>
